@@ -4,28 +4,27 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "Cell.h"
-#include "CellCharacter.generated.h"
+#include "Cell.generated.h"
 
-UCLASS()
-class LIFEGOING_API ACellCharacter : public ACell
+UCLASS(Abstract)
+class LIFEGOING_API ACell : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	ACellCharacter();
-
-	UFUNCTION(BlueprintCallable, Category = "Abilities")
-		void SpawnActor(FTransform spawnPos);
+	ACell();
 
 	UPROPERTY(EditAnywhere)
-		TSubclassOf<AActor>	actorBPToSpawn;
+		float maxHP;
+		float HP;
+		float speed;
+		float hunger;
 
-	void ChangeHP(float hpValue);
-
-	//UPROPERTY(EditAnywhere)
-	//	FTransform spawnPos;
+	UFUNCTION(BlueprintCallable, Category = "Cell")
+		void ChangeHP(float hpValue);
+		void ChangeSpeed();
+		void ChangeHunger();
 
 protected:
 	// Called when the game starts or when spawned
