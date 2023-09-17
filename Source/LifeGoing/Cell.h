@@ -16,12 +16,13 @@ public:
 	ACell();
 
 	UPROPERTY(EditAnywhere)
+		float maxHP;
 		float HP;
 		float speed;
 		float hunger;
 
-	UFUNCTION(BlueprintCallable)
-		void ChangeHP(float hp);
+	UFUNCTION(BlueprintCallable, Category = "Cell")
+		void ChangeHP(float hpValue);
 		void ChangeSpeed();
 		void ChangeHunger();
 

@@ -32,9 +32,9 @@ void ACell::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
-void ACell::ChangeHP(float hp)
+void ACell::ChangeHP(float hpValue)
 {
-	HP = HP + hp;
+	HP = HP + hpValue;
 }
 
 

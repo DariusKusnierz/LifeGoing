@@ -4,10 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Cell.h"
 #include "CellCharacter.generated.h"
 
 UCLASS()
-class LIFEGOING_API ACellCharacter : public ACharacter
+class LIFEGOING_API ACellCharacter : public ACell
 {
 	GENERATED_BODY()
 
@@ -20,6 +21,8 @@ public:
 
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<AActor>	actorBPToSpawn;
+
+	void ChangeHP(float hpValue);
 
 	//UPROPERTY(EditAnywhere)
 	//	FTransform spawnPos;

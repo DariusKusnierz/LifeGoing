@@ -39,3 +39,8 @@ void ACellCharacter::SpawnActor(FTransform spawnPos)
 
 	GetWorld()->SpawnActor<AActor>(actorBPToSpawn, spawnPos, spawnParams);
 }
+
+void ACellCharacter::ChangeHP(float hpValue)
+{
+	Super::ChangeHP(hpValue);
+}
