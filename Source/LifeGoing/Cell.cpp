@@ -37,4 +37,14 @@ void ACell::ChangeHP(float hpValue)
 	HP = HP + hpValue;
 }
 
+float ACell::GetHP()
+{
+	return HP;
+}
+
+float ACell::GetMaxHP()
+{
+	return maxHP;
+}
+
 

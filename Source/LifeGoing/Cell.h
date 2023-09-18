@@ -23,8 +23,13 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Cell")
 		void ChangeHP(float hpValue);
+	
 		void ChangeSpeed();
 		void ChangeHunger();
+	UFUNCTION(BlueprintCallable, Category = "Cell")
+		float GetHP();
+	UFUNCTION(BlueprintCallable, Category = "Cell")
+		float GetMaxHP();
 
 protected:
 	// Called when the game starts or when spawned
