@@ -31,6 +31,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Cell")
 		float GetMaxHP();
 
+	UFUNCTION(BlueprintCallable, Category = "Cell")
+		void DropFood(FTransform dropSpawnPosition);
+
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<AActor>	BPFoodToSpawn;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

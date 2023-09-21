@@ -16,11 +16,7 @@ public:
 	// Sets default values for this character's properties
 	ACellCharacter();
 
-	UFUNCTION(BlueprintCallable, Category = "Abilities")
-		void SpawnActor(FTransform spawnPos);
-
-	UPROPERTY(EditAnywhere)
-		TSubclassOf<AActor>	actorBPToSpawn;
+	
 
 	void ChangeHP(float hpValue);
 

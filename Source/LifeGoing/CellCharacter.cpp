@@ -32,14 +32,6 @@ void ACellCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 }
 
-void ACellCharacter::SpawnActor(FTransform spawnPos)
-{
-	FActorSpawnParameters spawnParams;
-	spawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
-
-	GetWorld()->SpawnActor<AActor>(actorBPToSpawn, spawnPos, spawnParams);
-}
-
 void ACellCharacter::ChangeHP(float hpValue)
 {
 	Super::ChangeHP(hpValue);

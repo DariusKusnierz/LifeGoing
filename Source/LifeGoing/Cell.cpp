@@ -48,3 +48,17 @@ float ACell::GetMaxHP()
 }
 
 
+void ACell::DropFood(FTransform dropSpawnPosition)
+{
+	FActorSpawnParameters spawnParams;
+	spawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+
+	if (dropSpawnPosition.Equals(FTransform()))
+	{
+		dropSpawnPosition = this->GetTransform();
+	}
+
+	GetWorld()->SpawnActor<AActor>(BPFoodToSpawn, dropSpawnPosition, spawnParams);
+}
+
+
